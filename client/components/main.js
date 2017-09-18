@@ -14,6 +14,11 @@ import ViewCart from './ViewCart'
  *  else common to our entire app. The 'picture' inside the frame is the space
  *  rendered out by the component's `children`.
  */
+
+ //carousel should be a separate component
+ //rule of thumb: if it's too long, might need to separate
+
+
 const Main = (props) => {
   const {children, handleClick, isLoggedIn, products, categories, cart} = props
   console.log("categories", categories)
@@ -53,6 +58,7 @@ const Main = (props) => {
           {
             isLoggedIn
               ? <div>
+                {/* entire thing should be in navbar */}
                 {/* The navbar will show these links after you log in */}
                 <Link to='/home'>Home</Link>
                 <a href='#' onClick={handleClick}>Logout</a>
