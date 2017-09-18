@@ -36,6 +36,8 @@ export const signup = (user, ownProps) => dispatch =>
     })
     .catch(() => dispatch());
 
+    //dispatch should have login after signup; epty dispatch is pointless
+
 export const auth = (email, password, method) => dispatch =>
   axios
     .post(`/auth/${method}`, { email, password })

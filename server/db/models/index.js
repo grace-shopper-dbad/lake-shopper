@@ -32,6 +32,8 @@ Product.belongsToMany(Order, { through: 'orderProduct'});
 
 //redundancies?
 
+//use eager loading to get those prodyctcategory tables
+
 module.exports = {
   User, Review, Product, Order, Category
 }
